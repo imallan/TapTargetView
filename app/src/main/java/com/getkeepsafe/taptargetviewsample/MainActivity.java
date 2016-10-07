@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         // You don't always need a sequence, and for that there's a single time tap target
         final SpannableString spannedDesc = new SpannableString("This is the sample app for TapTargetView");
         spannedDesc.setSpan(new UnderlineSpan(), spannedDesc.length() - "TapTargetView".length(), spannedDesc.length(), 0);
-        TapTargetView.showFor(this, TapTarget.forView(findViewById(R.id.fab2), "Hello, world!", spannedDesc)
+        TapTargetView.showFor(this, TapTarget.forView(findViewById(R.id.fab), "Hello, world!", spannedDesc)
                 .cancelable(false)
                 .drawShadow(true)
                 .tintTarget(false), new TapTargetView.Listener() {

@@ -808,13 +808,11 @@ public class TapTargetView extends View {
             d.getRealMetrics(realDisplayMetrics);
 
             int realHeight = realDisplayMetrics.heightPixels;
-//            int realWidth = realDisplayMetrics.widthPixels;
 
             DisplayMetrics displayMetrics = new DisplayMetrics();
             d.getMetrics(displayMetrics);
 
             int displayHeight = displayMetrics.heightPixels;
-//            int displayWidth = displayMetrics.widthPixels;
 
             hasSoftwareKeys = realHeight - displayHeight > 0;
         } else {

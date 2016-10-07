@@ -1,79 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="250dp"
+        android:background="#444444">
 
-        <FrameLayout
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:background="#444444">
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:theme="@style/Theme.AppCompat"/>
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:theme="@style/Theme.AppCompat"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="?attr/colorPrimary">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:background="?attr/colorPrimary"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    style="@style/TextAppearance.AppCompat.Subhead"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Some place"
-                    android:theme="@style/Theme.AppCompat"/>
-
-                <TextView
-                    style="@style/TextAppearance.AppCompat.Body1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="8dp"
-                    android:text="Building"
-                    android:theme="@style/Theme.AppCompat"/>
-
-            </LinearLayout>
-
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/fab"
+            <TextView
+                style="@style/TextAppearance.AppCompat.Subhead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end|bottom"
-                android:layout_marginBottom="50dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_directions_car_black_24dp"/>
+                android:text="Some place"
+                android:theme="@style/Theme.AppCompat"/>
 
-        </FrameLayout>
+            <TextView
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="Building"
+                android:theme="@style/Theme.AppCompat"/>
 
-        <TextView
-            android:id="@+id/educated"
-            style="@style/TextAppearance.AppCompat.Display1"
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="16dp"/>
-    </LinearLayout>
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="50dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_directions_car_black_24dp"/>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab2"
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/educated"
+        style="@style/TextAppearance.AppCompat.Display1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_directions_car_black_24dp"
-        app:fabSize="normal"/>
+        android:padding="16dp"/>
 
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
